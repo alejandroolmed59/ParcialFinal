@@ -3,7 +3,7 @@ extends layout
 block content
   h1 Administrador de videojuegos
 
-  form(action="/", method='POST', name='formRegistro' class='formRegistro')
+  form(action="/api/Videojuegos", method='POST', name='formRegistro' class='formRegistro')
     .formContenedor
       input#titulo(type="text", name="titulo", placeholder='Titulo')
       input#desarrolladora(type="text", name="desarrolladora", placeholder='Desarrolladora') 

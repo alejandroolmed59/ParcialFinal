@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose= require('mongoose');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var videojuegosRouter = require('./routes/videojuegos');
 
 var app = express();
 
@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/api/Videojuegos', videojuegosRouter);
 
 mongoose.connect('mongodb://localhost:27017/administradorVideojuegos', {
   useNewUrlParser:true
