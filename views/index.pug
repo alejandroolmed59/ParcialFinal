@@ -1,8 +1,8 @@
 extends layout
 
 block content
-  h1 Administrador de videojuegos
-
+  h1  Administrador de videojuegos
+  
   form(action="/api/Videojuegos", method='POST', name='formRegistro' class='formRegistro')
     .formContenedor
       input#titulo(type="text", name="titulo", placeholder='Titulo')
@@ -12,11 +12,11 @@ block content
 
   .contenedor
     table
-      th
-        td ID
-        td Videojuego
-        td Desarrolladora
-        td IGN
-        td Opcion
+      tr
+        th ID
+        th Videojuego
+        th Desarrolladora
+        th IGN
+        th Opcion
       tbody.tablaALlenar
     script(src="javascripts/main.js")

@@ -5,13 +5,18 @@ window.onload = () => {
 let app = {
     init: function () {
         this.loadContent();
+        //this.listenerEnviar();
+    },
+    listenerEnviar: function(){
+        var enviar= document.getElementById('enviar');
+        enviar.addEventListener('submit', this.anniadir());
     },
     addRows: function (element) {
         //console.log(element);
         var tbody = document.getElementsByClassName('tablaALlenar')[0];
         var tr = document.createElement('tr');
-        tr.innerHTML = `<td></td>
-                        <td>${element._id}</td>
+        
+        tr.innerHTML = `<td>${element._id}</td>
                         <td>${element.Titulo}</td>
                         <td>${element.Desarrolladora}</td>
                         <td>${element.Ign}</td>
@@ -24,9 +29,31 @@ let app = {
         });
         tbody.appendChild(tr);
     },
+    anniadir: function(){
+        var nuevoJuego={
+            Titulo: document.formRegistro.titulo.value,
+            Desarrolladora:document.formRegistro.desarrolladora.value,
+            Ign:document.formRegistro.ign.value
+        }
+        fetch('/api/Videojuegos', {
+            method:'POST',
+            body:JSON.stringify(nuevoJuego),
+            headers:{
+                'Content-type':'application/json'
+            }
+        })
+        .then(res=>{
+            return res.json();
+        })
+        .then(element=>{
+            console.log(element);
+            //this.addRows(element);
+        })
+    },
+
     delete: function (event, element, tr, tbody) {
         event.preventDefault();
-        fetch('/' + element._id, {
+        fetch('/api/Videojuegos/'+element._id, {
             method: 'DELETE'
         })
             .then(res => {

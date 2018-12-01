@@ -10,6 +10,7 @@ a {
 h1 {
   font: 1.5em;
   font-family: 'Pacifico', cursive;
+  background-color: rgb(207, 226, 122)
 }
 .formRegistro{
   background-color: rgb(117, 128, 134);
@@ -30,7 +31,30 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  justify-items: center;
 }
 input{
   border-radius: 16px;
+}
+
+
+table{
+  width: 100%;
+  margin: 3px solid black;
+
+}
+th{
+  background-color: #00B7FF;
+  font-size: 1.5em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+  text-align: center;
+  justify-content: center;
 }
