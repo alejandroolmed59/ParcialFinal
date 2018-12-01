@@ -4,14 +4,16 @@ block content
   h1 Administrador de videojuegos
 
   form(action="/", method='POST', name='formRegistro' class='formRegistro')
-    input#titulo(type="text", name="titulo", placeholder='Titulo')
-    input#desarrolladora(type="text", name="desarrolladora", placeholder='Desarrolladora') 
-    input#ign(type="text", name="ign", placeholder='IGN')
-    input(type="submit", value="Guardar")
+    .formContenedor
+      input#titulo(type="text", name="titulo", placeholder='Titulo')
+      input#desarrolladora(type="text", name="desarrolladora", placeholder='Desarrolladora') 
+      input#ign(type="text", name="ign", placeholder='IGN')
+      input#enviar(type="submit", value="Guardar")
 
-  table
-    th
-      tr ID
-      tr Videojuego
-      tr Desarrolladora
-      tr IGN
+  .contenedor
+    table
+      th
+        tr ID
+        tr Videojuego
+        tr Desarrolladora
+        tr IGN
