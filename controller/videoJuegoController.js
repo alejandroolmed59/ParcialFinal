@@ -33,7 +33,7 @@ videojuegoC.buscarporId= (function(req, res){
     //console.log(req);
     var id= req.params.id;
     videojuegoModel.findById(id, function(err, juego){
-        if(err){
+        if(err || juego==null){
             res.status(500).json({
                 msj:'No fue encontrado el videojuego',
                 err
