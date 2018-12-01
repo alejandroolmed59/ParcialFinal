@@ -1,0 +1,17 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0 30% 0 30%;
+}
+
+a {
+  color: #00B7FF;
+}
+h1 {
+  font: 1.5em;
+  font-family: 'Pacifico', cursive;
+}
+.formRegistro{
+  background-color: rgb(117, 128, 134);
+  padding: 20px;
+}
